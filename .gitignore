@@ -1,0 +1,22 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python cache and local editor settings
+__pycache__/
+*.py[cod]
+.vscode/
+
+# Runtime artifacts and logs
+*.log
+tmp/
+
+# Local vector databases and downloaded embedding models
+chroma_db/
+chroma_db_backup_*/
+models/
+
+# Duplicate/archive artifacts not needed for the source repository
+PDD_Backend_Portfolio_Luckin_RAG/
+*.zip

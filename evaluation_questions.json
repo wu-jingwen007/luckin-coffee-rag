@@ -1,0 +1,506 @@
+{
+  "version": "2.0",
+  "top_k": 4,
+  "questions": [
+    {
+      "id": "company_01",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸咖啡成立于什么时候，总部在哪里？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "成立于2017年8月，总部位于中国福建省厦门市。",
+      "required_groups": [["2017年8月"], ["福建省厦门市", "厦门市"]],
+      "evidence_groups": [["2017年8月"], ["福建省厦门市", "厦门市"]]
+    },
+    {
+      "id": "company_02",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸咖啡何时在纳斯达克上市，IPO募集资金多少？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "2019年5月17日在纳斯达克上市，募集资金约7.25亿美元。",
+      "required_groups": [["2019年5月17日"], ["7.25亿美元"]],
+      "evidence_groups": [["2019年5月17日"], ["7.25亿美元"]]
+    },
+    {
+      "id": "company_03",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸咖啡首次实现季度盈利是在什么时候，这意味着什么？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "2021年第四季度首次实现季度盈利，标志着公司走出危机。",
+      "required_groups": [["2021年Q4", "2021年第四季度"], ["走出危机", "走出了财务造假"]],
+      "evidence_groups": [["2021年Q4"], ["走出危机"]]
+    },
+    {
+      "id": "business_01",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸有多少比例的订单来自APP和小程序？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "超过90%的订单来自APP和小程序。",
+      "required_groups": [["超过90%", "90%以上"], ["APP"], ["小程序"]],
+      "evidence_groups": [["超过90%"], ["APP"], ["小程序"]]
+    },
+    {
+      "id": "business_02",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸的四种门店类型分别是什么？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "取料店、旗舰店、机器人店和合作店。",
+      "required_groups": [["取料店"], ["旗舰店"], ["机器人店"], ["合作店"]],
+      "evidence_groups": [["取料店"], ["旗舰店"], ["机器人店"], ["合作店"]]
+    },
+    {
+      "id": "business_03",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸何时全面开放加盟，开放了哪两种加盟模式？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "2022年4月全面开放加盟，包括代理加盟和联营加盟。",
+      "required_groups": [["2022年4月"], ["代理加盟"], ["联营加盟"]],
+      "evidence_groups": [["2022年4月"], ["代理加盟"], ["联营加盟"]]
+    },
+    {
+      "id": "product_01",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "生椰拿铁的主要原材料有哪些？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "主要包括生打厚椰乳、意式浓缩咖啡液，以及冰版的冰块或热版的热水。",
+      "required_groups": [["生打厚椰乳", "厚椰乳"], ["意式浓缩咖啡液", "浓缩咖啡"], ["冰块", "热水"]],
+      "evidence_groups": [["生打厚椰乳"], ["意式浓缩咖啡液"], ["冰块", "热水"]]
+    },
+    {
+      "id": "product_02",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "生椰拿铁是哪一年推出的，累计销量达到多少？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "2021年推出，累计销量超过1亿杯。",
+      "required_groups": [["2021年"], ["超过1亿杯", "突破1亿杯"]],
+      "evidence_groups": [["2021年"], ["1亿杯"]]
+    },
+    {
+      "id": "product_03",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "瑞幸新品开发流程包含哪五个步骤？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "市场调研、概念设计、内部测试、区域试点、全国推广。",
+      "required_groups": [["市场调研"], ["概念设计"], ["内部测试"], ["区域试点"], ["全国推广"]],
+      "evidence_groups": [["市场调研"], ["概念设计"], ["内部测试"], ["区域试点"], ["全国推广"]]
+    },
+    {
+      "id": "finance_01",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸2023年的营收和净利润分别是多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "2023年营收244.6亿元，净利润12.5亿元。",
+      "required_groups": [["244.6亿元", "244.6亿"], ["12.5亿元", "12.5亿"]],
+      "evidence_groups": [["244.6"], ["12.5"]]
+    },
+    {
+      "id": "finance_02",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸2024年的平均客单价是多少，下降的主要原因是什么？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "约12.5至13.0元，下降主要源于9.9元价格战策略。",
+      "required_groups": [["12.5—13.0", "12.5至13.0"], ["9.9元"], ["价格战"]],
+      "evidence_groups": [["12.5—13.0", "12.5至13.0"], ["9.9元"], ["价格战"]]
+    },
+    {
+      "id": "finance_03",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸B轮、B+轮和C轮融资的金额及主要投资方分别是什么？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "B轮1.4亿美元、今日资本领投；B+轮2亿美元、淡马锡领投；C轮7亿美元、腾讯和百度跟投。",
+      "required_groups": [["1.4亿美元"], ["今日资本"], ["2亿美元"], ["淡马锡"], ["7亿美元"], ["腾讯"], ["百度"]],
+      "evidence_groups": [["1.4亿美元"], ["今日资本"], ["2亿美元"], ["淡马锡"], ["7亿美元"], ["腾讯"], ["百度"]]
+    },
+    {
+      "id": "competition_01",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "资料中2024年中国咖啡市场规模约多少，预计2025年达到多少？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "2024年约6000亿元，预计2025年突破7000亿元。",
+      "required_groups": [["6000亿元", "6,000亿元"], ["7000亿元", "7,000亿元"]],
+      "evidence_groups": [["6,000亿元"], ["7,000亿元"]]
+    },
+    {
+      "id": "competition_02",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "2024年星巴克中国大陆和库迪咖啡的门店数分别约多少？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "星巴克约7000家，库迪约6000至8000家。",
+      "required_groups": [["7000家", "7,000家"], ["6000", "6,000"], ["8000", "8,000"]],
+      "evidence_groups": [["7,000家"], ["6,000", "8,000"]]
+    },
+    {
+      "id": "competition_03",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "资料总结的瑞幸竞争护城河包括哪些方面？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "规模壁垒、数字化能力、品牌认知、供应链深度、产品创新能力和成本优势。",
+      "required_groups": [["规模壁垒", "规模优势"], ["数字化能力"], ["品牌认知"], ["供应链深度"], ["产品创新能力"], ["成本优势"]],
+      "evidence_groups": [["规模壁垒"], ["数字化能力"], ["品牌认知"], ["供应链深度"], ["产品创新能力"], ["成本优势"]]
+    },
+    {
+      "id": "unknown_01",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸咖啡2026年第二季度的准确营收是多少？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_02",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "离北京天安门最近的瑞幸门店具体地址是什么？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_03",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "今天可以使用的瑞幸优惠券兑换码是什么？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_04",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸2026年7月新上市了哪些饮品？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_05",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸门店烘焙咖啡豆时使用的精确温度和时长是多少？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "company_04",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸第一家门店何时在哪里开业，采用了什么模式？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "2017年10月在天津开业，采用以取料店为主的小店模式。",
+      "required_groups": [["2017年10月"], ["天津"], ["小店模式", "取料店"]],
+      "evidence_groups": [["2017年10月"], ["天津"], ["小店模式"]]
+    },
+    {
+      "id": "company_05",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸财务造假何时曝光，公告中的伪造交易额约多少？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "2020年4月2日曝光，公告称伪造交易额约22亿元人民币。",
+      "required_groups": [["2020年4月2日"], ["22亿元"]],
+      "evidence_groups": [["2020年4月2日"], ["22亿元"]]
+    },
+    {
+      "id": "company_06",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸2020年与美国证券诉讼和解时支付了多少钱？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "支付1.8亿美元和解金。",
+      "required_groups": [["1.8亿美元"]],
+      "evidence_groups": [["1.8亿美元"]]
+    },
+    {
+      "id": "company_07",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "2021年重组后瑞幸的控股股东是谁，持股约多少？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "大钲资本成为控股股东，持股约51.4%。",
+      "required_groups": [["大钲资本"], ["51.4%"]],
+      "evidence_groups": [["大钲资本"], ["51.4%"]]
+    },
+    {
+      "id": "company_08",
+      "category": "公司概述",
+      "answerable": true,
+      "question": "瑞幸的四项核心价值观是什么？",
+      "gold_source": "01-公司概述.md",
+      "gold_answer": "客户为先、品质至上、创新驱动、高效执行。",
+      "required_groups": [["客户为先"], ["品质至上"], ["创新驱动"], ["高效执行"]],
+      "evidence_groups": [["客户为先"], ["品质至上"], ["创新驱动"], ["高效执行"]]
+    },
+    {
+      "id": "business_04",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸取料店通常多大，主要有什么运营特点？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "通常100至300平方英尺，以自提为主，座位很少，租金低、运营效率高。",
+      "required_groups": [["100—300", "100至300"], ["自提"], ["租金成本低", "租金低"], ["运营效率高"]],
+      "evidence_groups": [["100—300", "100至300"], ["自提"], ["租金成本低"], ["运营效率高"]]
+    },
+    {
+      "id": "business_05",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "截至2024年瑞幸年活跃用户超过多少？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "超过7000万。",
+      "required_groups": [["7000万", "7,000万"]],
+      "evidence_groups": [["7,000万"]]
+    },
+    {
+      "id": "business_06",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸咖啡豆主要从哪些国家直接采购？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "主要从巴西、哥伦比亚和埃塞俄比亚等产地直接采购。",
+      "required_groups": [["巴西"], ["哥伦比亚"], ["埃塞俄比亚"]],
+      "evidence_groups": [["巴西"], ["哥伦比亚"], ["埃塞俄比亚"]]
+    },
+    {
+      "id": "business_07",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸商业模式中的四类收入来源是什么？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "产品销售、加盟费、原材料供应和系统服务。",
+      "required_groups": [["产品销售"], ["加盟费"], ["原材料供应"], ["系统服务"]],
+      "evidence_groups": [["产品销售"], ["加盟费"], ["原材料供应"], ["系统服务"]]
+    },
+    {
+      "id": "business_08",
+      "category": "商业模式",
+      "answerable": true,
+      "question": "瑞幸控制成本的四种主要方式是什么？",
+      "gold_source": "02-商业模式.md",
+      "gold_answer": "小店模式、规模化效应、人力优化和数字化运营。",
+      "required_groups": [["小店模式"], ["规模化效应"], ["人力优化"], ["数字化运营"]],
+      "evidence_groups": [["小店模式"], ["规模化效应"], ["人力优化"], ["数字化运营"]]
+    },
+    {
+      "id": "product_04",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "经典咖啡系列中列出了哪四类产品？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "美式咖啡、拿铁咖啡、卡布奇诺和澳白。",
+      "required_groups": [["美式咖啡"], ["拿铁咖啡"], ["卡布奇诺"], ["澳白"]],
+      "evidence_groups": [["美式咖啡"], ["拿铁咖啡"], ["卡布奇诺"], ["澳白"]]
+    },
+    {
+      "id": "product_05",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "酱香拿铁何时推出，首日销售额和销量分别是多少？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "2024年4月推出，首日销售额突破1亿元，销量超过500万杯。",
+      "required_groups": [["2024年4月"], ["1亿元"], ["500万杯"]],
+      "evidence_groups": [["2024年4月"], ["1亿元"], ["500万杯"]]
+    },
+    {
+      "id": "product_06",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "瑞幸经典咖啡、创意特调和高端联名产品的价格区间分别是多少？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "经典咖啡9.9至15元，创意特调12至18元，高端或联名15至25元。",
+      "required_groups": [["9.9—15", "9.9至15"], ["12—18", "12至18"], ["15—25", "15至25"]],
+      "evidence_groups": [["9.9—15", "9.9至15"], ["12—18", "12至18"], ["15—25", "15至25"]]
+    },
+    {
+      "id": "product_07",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "资料称瑞幸每年大约推出多少款新品？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "每年推出超过100款新品。",
+      "required_groups": [["超过100款", "100款以上"]],
+      "evidence_groups": [["超过100款"]]
+    },
+    {
+      "id": "product_08",
+      "category": "产品体系",
+      "answerable": true,
+      "question": "瑞幸夏季和冬季分别主推哪些季节性产品？",
+      "gold_source": "03-产品体系.md",
+      "gold_answer": "夏季主推冰饮、果茶和冰沙；冬季主推热巧克力、姜茶和暖饮。",
+      "required_groups": [["冰饮"], ["果茶"], ["冰沙"], ["热巧克力"], ["姜茶"], ["暖饮"]],
+      "evidence_groups": [["冰饮"], ["果茶"], ["冰沙"], ["热巧克力"], ["姜茶"], ["暖饮"]]
+    },
+    {
+      "id": "finance_04",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸2024年营收、同比增速和净利润分别是多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "营收378.6亿元，同比增长54.7%，净利润41.4亿元。",
+      "required_groups": [["378.6亿元", "378.6亿"], ["54.7%"], ["41.4亿元", "41.4亿"]],
+      "evidence_groups": [["378.6"], ["54.7%"], ["41.4"]]
+    },
+    {
+      "id": "finance_05",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "2024年月均交易用户数及同比变化是多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "月均交易用户数930万以上，同比增长31%以上。",
+      "required_groups": [["9.3", "930万"], ["31.0%", "31%"]],
+      "evidence_groups": [["9.3+"], ["31.0%+"]]
+    },
+    {
+      "id": "finance_06",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸2024年总订单量和同比增速分别是多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "总订单量18亿杯以上，同比增长81.8%以上。",
+      "required_groups": [["18.0", "18亿"], ["81.8%"]],
+      "evidence_groups": [["18.0+"], ["81.8%+"]]
+    },
+    {
+      "id": "finance_07",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "瑞幸2023年和2024年的净利率分别约多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "2023年约5.1%，2024年约10.9%。",
+      "required_groups": [["5.1%"], ["10.9%"]],
+      "evidence_groups": [["5.1%"], ["10.9%"]]
+    },
+    {
+      "id": "finance_08",
+      "category": "财务数据",
+      "answerable": true,
+      "question": "资料中的瑞幸单店日均杯量和投资回报周期分别是多少？",
+      "gold_source": "04-财务数据.md",
+      "gold_answer": "单店日均约200至300杯，投资回报周期约12至18个月。",
+      "required_groups": [["200—300", "200至300"], ["12—18个月", "12至18个月"]],
+      "evidence_groups": [["200—300", "200至300"], ["12—18个月", "12至18个月"]]
+    },
+    {
+      "id": "competition_04",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "中国咖啡市场年均增速和人均年消费量分别如何？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "市场年均增速20%以上，中国人均咖啡消费不足5杯每年。",
+      "required_groups": [["20%以上", "20%"], ["不足5杯", "少于5杯"]],
+      "evidence_groups": [["20%以上"], ["不足5杯"]]
+    },
+    {
+      "id": "competition_05",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "中国咖啡高端、中端、大众和下沉市场的客单价区间分别是多少？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "高端25至40元，中端15至25元，大众9.9至18元，下沉市场5至10元。",
+      "required_groups": [["25—40元", "25至40元"], ["15—25元", "15至25元"], ["9.9—18元", "9.9至18元"], ["5—10元", "5至10元"]],
+      "evidence_groups": [["25—40元", "25至40元"], ["15—25元", "15至25元"], ["9.9—18元", "9.9至18元"], ["5—10元", "5至10元"]]
+    },
+    {
+      "id": "competition_06",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "Manner在2024年约有多少家门店，有什么特色政策？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "约600至800家门店，特色是小店模式和自带杯减5元。",
+      "required_groups": [["600—800家", "600至800家"], ["自带杯"], ["减5元"]],
+      "evidence_groups": [["600—800家", "600至800家"], ["自带杯减5元"]]
+    },
+    {
+      "id": "competition_07",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "Tims天好咖啡2024年约有多少家门店，采用什么产品线定位？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "约1000至1200家门店，定位为咖啡加烘焙的双产品线模式。",
+      "required_groups": [["1,000—1,200家", "1000至1200家"], ["咖啡+烘焙", "咖啡加烘焙"], ["双产品线"]],
+      "evidence_groups": [["1,000—1,200家", "1000至1200家"], ["咖啡+烘焙"], ["双产品线"]]
+    },
+    {
+      "id": "competition_08",
+      "category": "行业竞争",
+      "answerable": true,
+      "question": "幸运咖2024年约有多少家门店，主要价格区间是多少？",
+      "gold_source": "05-行业竞争.md",
+      "gold_answer": "约5000至6000家门店，价格区间5至10元。",
+      "required_groups": [["5,000—6,000家", "5000至6000家"], ["5—10元", "5至10元"]],
+      "evidence_groups": [["5,000—6,000家", "5000至6000家"], ["5—10元", "5至10元"]]
+    },
+    {
+      "id": "unknown_06",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸咖啡今天的首席执行官是谁？",
+      "gold_source": null,
+      "gold_answer": "资料不能证明今天的实时任职情况，应明确资料边界。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_07",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸2025年全年准确营收和净利润是多少？",
+      "gold_source": null,
+      "gold_answer": "资料未披露2025年完整财务数据，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_08",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "上海南京东路某家瑞幸门店今天几点关门？",
+      "gold_source": null,
+      "gold_answer": "资料未提供具体门店实时营业时间，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_09",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "瑞幸咖啡2026年的员工总人数是多少？",
+      "gold_source": null,
+      "gold_answer": "资料未提供，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    },
+    {
+      "id": "unknown_10",
+      "category": "资料外问题",
+      "answerable": false,
+      "question": "一杯瑞幸生椰拿铁准确含有多少毫克咖啡因？",
+      "gold_source": null,
+      "gold_answer": "资料未提供精确咖啡因含量，无法回答。",
+      "required_groups": [],
+      "evidence_groups": []
+    }
+  ]
+}
