@@ -42,6 +42,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 <h1>瑞幸咖啡知识库问答</h1>
 <p>基于 RAG 的企业知识智能检索系统</p>
 </div>
+
 <div class="chat-container" id="chatContainer">
 <div class="welcome" id="welcomeScreen">
 <h2>欢迎提问关于瑞幸咖啡的任何问题</h2>
@@ -56,14 +57,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
 </div>
 </div>
 </div>
+
 <div class="input-area">
 <div class="input-wrapper">
 <input type="text" id="questionInput" placeholder="输入你的问题..." onkeydown="if(event.key==='Enter')sendMessage()">
 <button id="sendBtn" onclick="sendMessage()">发送</button>
 </div>
 </div>
+
 <script>
-var API_BASE = "http://localhost:8000";
+// Empty means “use the same public address as this webpage”.
+var API_BASE = "";
 var chatContainer = document.getElementById("chatContainer");
 var questionInput = document.getElementById("questionInput");
 var sendBtn = document.getElementById("sendBtn");
@@ -74,13 +78,16 @@ function addMessage(role, content, sources) {
   var div = document.createElement("div");
   div.className = "message " + role;
   var html = content.replace(/\n/g, "<br>");
+
   if (sources && sources.length > 0) {
     html += '<div class="sources"><div class="sources-title">参考来源：</div>';
     sources.forEach(function(s) {
-      html += '<div class="source-item"><span class="source-name">'+s.source+'</span><br>'+s.content+'</div>';
+      html += '<div class="source-item"><span class="source-name">' +
+        s.source + '</span><br>' + s.content + '</div>';
     });
     html += "</div>";
   }
+
   div.innerHTML = html;
   chatContainer.appendChild(div);
   chatContainer.scrollTop = chatContainer.scrollHeight;
@@ -96,42 +103,48 @@ function addLoading() {
 }
 
 function removeLoading() {
-  var el = document.getElementById("loadingMsg");
-  if (el) el.remove();
+  var element = document.getElementById("loadingMsg");
+  if (element) element.remove();
 }
 
 async function sendMessage() {
   var question = questionInput.value.trim();
   if (!question) return;
+
   questionInput.value = "";
   addMessage("user", question);
   sendBtn.disabled = true;
   sendBtn.textContent = "发送中...";
   addLoading();
+
   try {
-    var resp = await fetch(API_BASE + "/ask", {
+    var response = await fetch(API_BASE + "/ask", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({question: question})
     });
+
     removeLoading();
-    if (!resp.ok) {
-      var err = await resp.json();
-      addMessage("assistant", "\u274c " + (err.detail || "请求失败"));
+
+    if (!response.ok) {
+      var error = await response.json();
+      addMessage("assistant", "❌ " + (error.detail || "请求失败"));
       return;
     }
-    var data = await resp.json();
+
+    var data = await response.json();
     addMessage("assistant", data.answer, data.sources);
-  } catch(e) {
+  } catch (error) {
     removeLoading();
-    addMessage("assistant", "\u274c 无法连接到 API 服务，请确认服务已启动");
+    addMessage("assistant", "❌ 无法连接到 API 服务，请确认服务已启动");
   }
+
   sendBtn.disabled = false;
   sendBtn.textContent = "发送";
 }
 
-function askSuggestion(btn) {
-  questionInput.value = btn.textContent;
+function askSuggestion(button) {
+  questionInput.value = button.textContent;
   sendMessage();
 }
 </script>
